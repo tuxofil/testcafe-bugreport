@@ -1,0 +1,27 @@
+{
+  "fixtures": [
+    {
+      "name": "Test",
+      "pageUrl": "http://archive.ubuntu.com/ubuntu/",
+      "tests": [
+        {
+          "name": "main",
+          "commands": [
+            {
+              "type": "assertion",
+              "assertionType": "contains",
+              "expected": {
+                "type": "js-expr",
+                "value": "\"Index of /ubuntu\""
+              },
+              "actual": {
+                "type": "js-expr",
+                "value": "Selector('h1').nth(0).innerText"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
